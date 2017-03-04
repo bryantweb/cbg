@@ -51,6 +51,52 @@ define( 'CHILD_THEME_NAME', 'CBG' );
 define( 'CHILD_THEME_URL', 'https://chrisbryant.com' );
 define( 'CHILD_THEME_VERSION', '0.0.1' );
 
+
+// TUTORIAL
+
+// Remove site description
+add_filter( 'genesis_attr_site-description', 'abte_add_site_description_class' );
+/**
+ * Add class for screen readers to site description.
+ *
+ * Unhook this if you'd like to show the site description.
+ *
+ * @since 1.0.0
+ *
+ * @param array $attributes Existing HTML attributes for site description element.
+ * @return string Amended HTML attributes for site description element.
+ */
+function abte_add_site_description_class( $attributes ) {
+	$attributes['class'] .= ' screen-reader-text';
+
+	return $attributes;
+}
+
+// Remove the header right widget area
+unregister_sidebar( 'header-right' );
+
+// Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'genesis_do_nav' );
+
+// Remove Primary Navigation's wrap
+add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	// 'nav',
+	'subnav',
+	'site-inner',
+	'footer-widgets',
+	'footer'
+) );
+
+// TUTORIAL END
+
+
+
+
+
+
+
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 function genesis_sample_enqueue_scripts_styles() {
@@ -183,3 +229,5 @@ function bfg_footer_creds_text() {
 	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Chris Bryant, All rights reserved. <a href="/terms" title="Terms of Use">Disclaimer</a> <a href="/privacy" title="Privacy Policy">Privacy Policy</a> <a href="/sitemap" title="Sitemap">Sitemap</a> <a href="/contact" title="Contact Chris Bryant">Contact</a> <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
 
 }
+
+
