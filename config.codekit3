@@ -151,6 +151,12 @@
 		"oAP": "\/page_landing.php",
 		"oF": 0
 		},
+	"\/README.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/README.html",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -373,16 +379,16 @@
 		"uL": 1
 		},
 	"\/src\/scss\/style.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style.css",
-		"oF": 2,
-		"oS": 3,
+		"oAP": "\/src\/css\/style.css",
+		"oF": 0,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/style-min.css": {
@@ -402,8 +408,8 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style-min.css",
-		"oF": 1,
-		"oS": 3
+		"oF": 0,
+		"oS": 0
 		},
 	"\/xml\/sample.xml": {
 		"ft": 8192,
