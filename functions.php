@@ -108,7 +108,7 @@ add_theme_support( 'custom-header', array(
 ) );
 
 // Add support for Genesis Structural Wraps
-//add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
+add_theme_support( 'genesis-structural-wraps', array( 'header', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
 
 // Add support for custom background.
 //add_theme_support( 'custom-background' );
@@ -183,3 +183,38 @@ function bfg_footer_creds_text() {
 	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Chris Bryant, All rights reserved. <a href="/terms" title="Terms of Use">Disclaimer</a> <a href="/privacy" title="Privacy Policy">Privacy Policy</a> <a href="/sitemap" title="Sitemap">Sitemap</a> <a href="/contact" title="Contact Chris Bryant">Contact</a> <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
 
 }
+
+
+
+
+/**
+ * Remove Genesis Page Templates
+ *
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/remove-genesis-page-templates
+ *
+ * @param array $page_templates
+ * @return array
+ */
+function be_remove_genesis_page_templates( $page_templates ) {
+	unset( $page_templates['page_archive.php'] );
+	unset( $page_templates['page_blog.php'] );
+	return $page_templates;
+}
+add_filter( 'theme_page_templates', 'be_remove_genesis_page_templates' );
+
+
+/**
+ * Remove Metaboxes
+ * This removes unused or unneeded metaboxes from Genesis > Theme Settings.
+ * See /genesis/lib/admin/theme-settings for all metaboxes.
+ *
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/code/remove-metaboxes-from-genesis-theme-settings/
+ */
+
+function be_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
+	remove_meta_box( 'genesis-theme-settings-blogpage', $_genesis_theme_settings_pagehook, 'main' );
+}
+
+add_action( 'genesis_theme_settings_metaboxes', 'be_remove_metaboxes' );

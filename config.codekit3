@@ -27,6 +27,12 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/frontpage-template.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/frontpage-template.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -151,6 +157,12 @@
 		"oAP": "\/page_landing.php",
 		"oF": 0
 		},
+	"\/page_sitemap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_sitemap.php",
+		"oF": 0
+		},
 	"\/README.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -182,16 +194,6 @@
 		"oAP": "\/screenshot.png",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/src\/css\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/src\/css\/style-min.css",
-		"oF": 0,
-		"oS": 0
 		},
 	"\/src\/scss\/genesis\/_common.scss": {
 		"aP": 0,
@@ -389,15 +391,15 @@
 		"uL": 1
 		},
 	"\/src\/scss\/style.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/src\/css\/style.css",
-		"oF": 0,
+		"oAP": "\/style.css",
+		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},
