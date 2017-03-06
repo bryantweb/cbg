@@ -33,7 +33,7 @@ add_action( 'genesis_post_content', 'genesis_page_archive_content' );
  */
 function genesis_page_archive_content() {
 
-	$heading = ( genesis_a11y( 'headings' ) ? 'h2' : 'h4' );
+	$heading = ( genesis_a11y( 'headings' ) ? 'h3' : 'h4' );
 
 	genesis_sitemap( $heading );
 

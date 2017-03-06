@@ -6,7 +6,7 @@
 	Author URI: https://chrisbryant.com
 	Version: 0.0.1
 	Template: genesis
-	Template Version: 2.4.2
+	Template Version: 2.3.0
 	License: GPL-2.0+
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: cbg
@@ -221,19 +221,19 @@ html {
 
 /* Chrome fix */
 body > div {
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 18px;
+  font-size: 1.8rem; }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
   color: #333;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  line-height: 1.625;
-  margin: 0; }
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0; }
 
 a,
 button,
@@ -243,13 +243,14 @@ input[type="reset"],
 input[type="submit"],
 textarea:focus,
 .button,
-.gallery img {
+.gallery img,
+.site-header {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
 
 a {
-  color: #c3251d;
-  text-decoration: underline; }
+  color: #048ed3;
+  text-decoration: none; }
 
 a:focus,
 a:hover {
@@ -302,6 +303,12 @@ blockquote::before {
   position: relative;
   top: -10px; }
 
+.lead {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center; }
+
 /* ## Headings
 --------------------------------------------- */
 h1,
@@ -316,28 +323,47 @@ h6 {
   margin: 0 0 10px; }
 
 h1 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 50px;
+  font-size: 5.0rem;
+  line-height: 1.125;
+  margin: 0.67em 0;
+  font-weight: 700; }
 
 h2 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 46px;
+  font-size: 4.6rem;
+  font-weight: 500;
+  line-height: 1.175;
+  letter-spacing: -1px;
+  margin: 0 0 1.1em 0; }
 
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem; }
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 1em 0; }
 
 h4 {
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1.240em;
+  margin: 1.33em 0;
+  font-weight: 500; }
 
 h5 {
   font-size: 18px;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 1.67em 0; }
 
 h6 {
-  font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 2.33em 0; }
 
 /* ## Objects
 --------------------------------------------- */
@@ -572,21 +598,22 @@ th:first-child {
 ---------------------------------------------------------------------------------------------------- */
 /* ## Site Containers
 --------------------------------------------- */
-.site-inner,
 .wrap {
   margin: 0 auto;
-  max-width: 1280px; }
+  max-width: 1180px; }
 
 .site-inner {
   clear: both;
   padding-top: 40px;
-  word-wrap: break-word; }
+  margin-top: 101px;
+  word-wrap: break-word;
+  width: 100%; }
 
-.landing-page .site-inner {
+.landing-page .wrap {
   max-width: 800px; }
 
 .vh-wrap {
-  min-height: calc(100vh - 120px); }
+  min-height: calc((100vh - 77px)); }
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -942,11 +969,24 @@ img.alignright,
 
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
 .site-header {
-  background-color: #fff; }
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
 
-.site-header > .wrap {
-  padding: 20px 0; }
+.site-header.shrink {
+  border-color: #eee;
+  padding: 0px 30px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 3px; }
+
+.admin-bar .site-header {
+  top: 32px; }
 
 /* ## Title Area
 --------------------------------------------- */
@@ -1273,21 +1313,26 @@ p.entry-meta {
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1;
-  padding: 60px 0;
-  text-align: center; }
+  background-color: #282a2b;
+  border-top: 1px solid #4b4c4d;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 30px 0;
+  text-align: center;
+  color: #8c8281; }
 
 .site-footer p {
   margin-bottom: 0; }
 
+.site-footer a {
+  color: #8c8281; }
+  .site-footer a:hover {
+    color: #8fa733; }
+
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 1340px) {
-  .site-inner,
   .wrap {
     max-width: 1140px; }
   .content-sidebar-sidebar .content-sidebar-wrap,
@@ -1311,7 +1356,6 @@ p.entry-meta {
     margin-right: 60px; } }
 
 @media only screen and (max-width: 1200px) {
-  .site-inner,
   .wrap {
     max-width: 960px; }
   .content-sidebar-sidebar .content-sidebar-wrap,
@@ -1333,9 +1377,10 @@ p.entry-meta {
     margin-right: 30px; } }
 
 @media only screen and (max-width: 1023px) {
-  .site-inner,
   .wrap {
     max-width: 800px; }
+  .site-header > .wrap {
+    padding: 0 0; }
   .content,
   .content-sidebar-sidebar .content,
   .content-sidebar-sidebar .content-sidebar-wrap,
@@ -1470,8 +1515,6 @@ p.entry-meta {
   body > div {
     font-size: 18px;
     font-size: 1.8rem; }
-  .site-inner {
-    padding: 5% 5% 0; }
   .wrap {
     padding-left: 5%;
     padding-right: 5%; }
@@ -1602,3 +1645,231 @@ p.entry-meta {
   ol,
   ul {
     page-break-before: avoid; } }
+
+/* ## Homepage Customizations
+--------------------------------------------- */
+.home .site-inner {
+  padding-top: 0px; }
+
+.full-width-container {
+  width: 100%;
+  padding: 100px 0px;
+  display: block; }
+
+.hero {
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(35, 53, 9, 0);
+  background-image: url(/wp-content/uploads/2017/03/graber-blinds-feature-drk.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .hero p {
+    font-size: 22px;
+    line-height: 1.4em;
+    color: #eee;
+    font-weight: 400; }
+  .hero h1 {
+    color: #fff; }
+
+.home h2 {
+  text-align: center;
+  margin-bottom: 31px; }
+
+.home h3 {
+  text-align: center; }
+
+.home h5 {
+  margin-bottom: 14px; }
+
+span.circle.dashicons.dashicons-yes {
+  background: #83c761;
+  border-radius: 50%;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  line-height: 1;
+  margin: 2px 10px; }
+
+.hero ul {
+  margin: 10px 0 40px; }
+  .hero ul li {
+    font-size: 22px;
+    line-height: 1.6em;
+    color: #eee;
+    font-weight: 400;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif; }
+
+.contact-info h2 {
+  text-align: left; }
+
+.contact-info h6 {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  text-transform: uppercase; }
+
+.contact-info p {
+  margin-bottom: 20px; }
+
+.large-cta {
+  background: #f6f8fa;
+  text-align: center; }
+
+.brands {
+  background: #efefef; }
+
+.logo-image {
+  text-align: center; }
+
+.featured-products p {
+  text-align: center; }
+
+.product .image-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  vertical-align: middle;
+  max-width: 100%; }
+
+.product .image-wrapper img {
+  opacity: 1;
+  transition: opacity 1s,-webkit-transform 1s;
+  -webkit-transition: opacity 1s,-webkit-transform 1s;
+  transition: opacity 1s,transform 1s;
+  transition: opacity 1s,transform 1s,-webkit-transform 1s;
+  vertical-align: top; }
+  .product .image-wrapper img:hover {
+    opacity: .9;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+    height: auto; }
+
+.testimonials {
+  background: #37201e;
+  color: #eee;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.8; }
+  .testimonials .author {
+    font-weight: 300; }
+
+/*MONTHLY PROMO BOX*/
+.monthly-promo {
+  background-image: url(/wp-content/uploads/2017/03/marchmay-freecordless-promo.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.promo-box {
+  background: #fff;
+  padding: 40px 80px; }
+
+.promo-box h3 {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #39201e; }
+
+p.promo-subtitle {
+  color: #39201e;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: -10px; }
+
+p.promo-desc {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400; }
+
+.promo-date-range {
+  background: #85a950;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  margin-left: -80px;
+  margin-right: -80px;
+  font-weight: 400; }
+
+.promo-cta {
+  text-align: center; }
+
+.promo-cta a {
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #333;
+  margin: 40px 0 0px;
+  border: 1px solid #333;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400; }
+
+.promo-cta a:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 1px 15px 0px rgba(84, 110, 122, 0.4); }
+
+.btn {
+  text-transform: uppercase;
+  width: auto;
+  background: #79c76f;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0px;
+  display: inline-block; }
+  .btn:hover {
+    background: #52b346;
+    color: #fff; }
+
+.pill {
+  border-radius: 25px; }
+
+.btn.lrg {
+  padding: 17px 40px;
+  line-height: 21px;
+  font-size: 18px; }
+
+a.btn.sml {
+  padding: 9px 20px;
+  line-height: 14px;
+  font-size: 14px;
+  margin: 20px 0; }
+
+@media only screen and (max-width: 1023px) {
+  a.btn.sml {
+    margin-top: 0px; } }
+
+a.phone.btn.sml {
+  background: #2483b3; }
+  a.phone.btn.sml:hover {
+    background: #048ed3; }
+
+@media only screen and (min-width: 1024px) {
+  a.phone.btn.sml {
+    display: none; } }
+
+@media only screen and (max-width: 409px) {
+  .phone.btn.pill.sml {
+    margin-right: 0px;
+    padding: 9px 37px;
+    margin-top: 0px;
+    margin-bottom: 10px; } }
+
+@media only screen and (min-width: 410px) {
+  .phone.btn.pill.sml {
+    margin-right: 20px;
+    padding: 9px 22px; } }

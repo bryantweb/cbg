@@ -1,0 +1,287 @@
+/* ## Homepage Customizations
+--------------------------------------------- */
+.home .site-inner {
+	padding-top: 0px;
+}
+
+.full-width-container {
+	width: 100%;
+	padding: 100px 0px;
+	display: block;
+}
+
+
+// HERO
+.hero {
+	text-shadow: 0px 1px rgba(0,0,0,0.3);
+	background-color: rgba(35,53,9,0);
+    background-image: url(/wp-content/uploads/2017/03/graber-blinds-feature-drk.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+		p {
+	    font-size: 22px;
+	    line-height: 1.4em;
+	    color: #eee;
+	    font-weight: 400;
+	}
+	h1 {
+		color: #fff;
+	}
+}
+
+.home {
+	h2 {
+	text-align: center;
+	margin-bottom: 31px;
+	}
+	h3 {
+		text-align: center;
+	}
+	h5 {
+		margin-bottom: 14px;
+	}
+}
+
+span.circle.dashicons.dashicons-yes {
+    background: #83c761;
+    border-radius: 50%;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    line-height: 1;
+    margin: 2px 10px;
+}
+
+.hero ul {
+	margin: 10px 0 40px;
+	li {
+		font-size: 22px;
+    	line-height: 1.6em;
+    	color: #eee;
+    	font-weight: 400;
+    	text-shadow: 0px 1px rgba(0,0,0,0.3);
+    	font-family: 'Roboto', sans-serif;
+	}
+}
+
+
+// CONTACT INFORMATION 
+
+.contact-info {
+	h2 {
+		text-align: left;
+	}
+	h6 {
+		margin-top: 14px;
+		margin-bottom: 14px;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+// LARGE CTA
+
+.large-cta {
+	background: #f6f8fa;
+	text-align: center;
+}
+
+// BRANDS
+
+.brands {
+	background: #efefef;
+}
+
+.logo-image {
+	text-align: center;
+}
+
+// FEATURED PRODUCTS
+.featured-products p {
+	text-align: center;
+}
+
+.product .image-wrapper  {
+	overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.product .image-wrapper img {
+	opacity: 1;
+    transition: opacity 1s,-webkit-transform 1s;
+    transition: opacity 1s,transform 1s;
+    transition: opacity 1s,transform 1s,-webkit-transform 1s;
+    vertical-align: top;
+
+
+    	&:hover {
+    opacity: .9;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);height: auto;
+    	}
+	}
+
+// FAQ
+
+.faq {
+}
+
+
+.testimonials {
+	background: #37201e;
+	color: #eee;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.8;
+	 .author {
+	 	font-weight: 300;
+	 }
+}
+/*MONTHLY PROMO BOX*/
+.monthly-promo {
+	    background-image: url(/wp-content/uploads/2017/03/marchmay-freecordless-promo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.promo-box {
+	background: #fff;
+	padding: 40px 80px;
+}
+
+.promo-box h3 {
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #39201e;
+}
+
+p.promo-subtitle {
+    color: #39201e;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+
+p.promo-desc {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.promo-date-range {
+    background: #85a950;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    margin-left: -80px;
+    margin-right: -80px;
+    font-weight: 400;
+}
+
+.promo-cta {
+    text-align: center;
+}
+
+.promo-cta a {
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #333;
+    margin: 40px 0 0px;
+    border: 1px solid #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.promo-cta a:hover {
+    transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 1px 15px 0px rgba(84,110,122,0.4);
+    -moz-box-shadow: 0px 1px 15px 0px rgba(84,110,122,0.4);
+    box-shadow: 0px 1px 15px 0px rgba(84,110,122,0.4);
+}
+
+
+.btn {
+	text-transform: uppercase;
+	width: auto; 
+	background: #79c76f;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0px;
+	display: inline-block;
+		&:hover {
+			background: darken(#79c76f, 12%);
+			color: #fff;
+		}
+}
+
+.pill {
+	border-radius: 25px;
+}
+
+.btn.lrg {
+    padding: 17px 40px;
+    line-height: 21px;
+    font-size: 18px;
+}
+
+a.btn.sml {
+	padding: 9px 20px;
+    line-height: 14px;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 1023px) {
+	a.btn.sml {
+		margin-top: 0px;
+	}
+}
+
+a.phone.btn.sml {
+	background: desaturate(#048ed3, 30%);
+		&:hover {
+			background: #048ed3;
+		}
+}
+@media only screen and (min-width: 1024px) {
+	a.phone.btn.sml {display: none;}
+}
+@media only screen and (max-width: 409px) {
+	.phone.btn.pill.sml {
+	    margin-right: 0px;
+	    padding: 9px 37px;
+	    margin-top: 0px;
+	    margin-bottom: 10px;
+	}
+}
+@media only screen and (min-width: 410px) {
+	.phone.btn.pill.sml {
+	    margin-right: 20px;
+	    padding: 9px 22px;
+	}
+}

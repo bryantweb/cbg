@@ -1,13 +1,32 @@
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
 
 .site-header {
 	background-color: #fff;
+	border-bottom: 1px solid transparent;
+	padding: 10px 30px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
 }
 
-.site-header > .wrap {
-	padding: 20px 0;
+.site-header.shrink {
+	border-color: #eee;
+	padding: 0px 30px;
+	box-shadow: rgba(0,0,0,.117647) 0 1px 3px
 }
+
+.admin-bar .site-header {
+	top: 32px;
+}
+
+// .site-header > .wrap {
+// 	padding: 10px 0;
+// }
+
 
 /* ## Title Area
 --------------------------------------------- */

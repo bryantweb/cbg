@@ -3,7 +3,7 @@
 
 @media only screen and (max-width: 1340px) {
 
-	.site-inner,
+	
 	.wrap {
 		max-width: 1140px;
 	}
@@ -44,7 +44,6 @@
 
 @media only screen and (max-width: 1200px) {
 
-	.site-inner,
 	.wrap {
 		max-width: 960px;
 	}
@@ -80,10 +79,14 @@
 
 @media only screen and (max-width: 1023px) {
 
-	.site-inner,
 	.wrap {
 		max-width: 800px;
 	}
+
+	.site-header > .wrap {
+	padding: 0 0;
+	}
+
 
 	.content,
 	.content-sidebar-sidebar .content,
@@ -276,9 +279,9 @@
 		font-size: 1.8rem;
 	}
 
-	.site-inner {
-		padding: 5% 5% 0;
-	}
+	// .site-inner {
+	// 	padding: 5% 5% 0;
+	// }
 
 	.wrap {
 		padding-left: 5%;
