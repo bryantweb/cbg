@@ -2,10 +2,6 @@
 
 if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/**
-* Template Name: Frontpage
-* Description: Modular Homepage using ACF
-*/
 
 // Use H1 for site title on homepage only
 function cbg_h1_for_site_title( $wrap ) {
@@ -18,7 +14,7 @@ add_filter( 'genesis_attr_body', 'themeprefix_add_css_attr' );
 function themeprefix_add_css_attr( $attributes ) {
  
  // add original plus extra CSS classes
- $attributes['class'] .= ' landing';
+ $attributes['class'] .= ' landing request-quote';
  
  // return the attributes
  return $attributes;
@@ -57,15 +53,27 @@ add_action( 'cb_frontpage', 'cb_frontpage_content' );
 function cb_frontpage_content() { ?>
 <div class="hero full-width-container">
   <div class="wrap">
-    <div class="hero-content five-sixths first">
-      <h1>Kelowna Custom Blinds, Shades, Drapery, and Window Treatments.</h1>
-      <p class="subheading">Enhance your interior with refined elegance and style. <strong>Inspired Window Fashions</strong> delivers a superior product and experience from design consultation, installation, and throughout the life of our products.</p>
+    <div class="hero-content one-half first">
+      <h1>Free Design Consultation</h1>
+      <p class="subheading">Transform your living space. <strong>Inspired Window Fashions</strong> delivers a superior product and experience in Kelowna, Penticton, and Vernon. Get started. Request your free in-home design consultation now.</p>
       <ul class="checklist">
         <li><span class="circle dashicons dashicons-yes"></span> Beautify Your Home</li>
         <li><span class="circle dashicons dashicons-yes"></span> Control Lighting &amp; Privacy</li>
         <li><span class="circle dashicons dashicons-yes"></span> Boost Energy Efficiency</li>
       </ul>
-      <a class="btn pill lrg popmake-homepage-form" href="" title="Request Free Quote">Get Free Quote</a>
+      <div class="hero-testimonial">
+          <p class="testimonial">&ldquo; I really enjoyed the whole experience and time we spent ensuring I got exactly what I wanted. &rdquo;</p>
+        <div class="author">&mdash; Susan Clarke</div>
+      </div>
+      <img id="hero-inline-trust-signals" src="/wp-content/uploads/2017/03/iwf-trust-signals-2.png" alt="Kelowna Blinds Specialists">
+    </div>
+    <div class="one-half">
+    <div class="form-container">
+      <div class="form-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g fill="#6bc079"><path d="M48.15 16.99h.32v11.13h-.32zM48.31 28.48a.49.49 0 0 0-.49.49v1a.49.49 0 1 0 1 0v-.97a.49.49 0 0 0-.51-.52zM45.5 16.21h2.76a.22.22 0 0 0 .22-.22v-1.99a.22.22 0 0 0-.22-.21h-36.84a.22.22 0 0 0-.22.21v2a.22.22 0 0 0 .22.22h2.58v1h-1.78v29.02h4v-29.05h-1.84v-1h4.86v1h-1.83v29.05h4v-29.05h-1.82v-1h4.81v1h-1.81v29.05h4v-29.05h-1.84v-1h4.86v1h-1.83v29.05h4v-29.05h-1.78v-1h4.81v1h-1.81v29.05h4v-29.05h-1.88v-1h4.88v1h-1.86v29.05h4v-29.05h-1.81v-1h4.82v1h-1.83v29.05h4v-29.05h-1.82zM49.56 0h-39.12a10.44 10.44 0 0 0-10.44 10.44v39.12a10.44 10.44 0 0 0 10.44 10.44h39.12a10.44 10.44 0 0 0 10.44-10.44v-39.12a10.44 10.44 0 0 0-10.44-10.44zm7.58 49.56a7.59 7.59 0 0 1-7.58 7.58h-39.12a7.59 7.59 0 0 1-7.58-7.58v-39.12a7.59 7.59 0 0 1 7.58-7.58h39.12a7.59 7.59 0 0 1 7.58 7.58z"/></g></svg></div>
+      <p>Complete the form. We will get back to you as soon as possible (usually within hours) to arrange for your free in-home design consultation.</p>
+      <div class="inline-gform"><?php gravity_form(2, false, false, false, '', true, 12); ?></div>
+      <p class="privacy"><span class="dashicons dashicons-lock"></span> <a href="/privacy" title="Privacy Policy">Privacy</a></p>
+    </div>
     </div>
   </div>
 </div>
@@ -74,12 +82,12 @@ function cb_frontpage_content() { ?>
   <div class="wrap"> 
     <h2>Transform Your Space</h2>
     <p class="lead">Compliment your decor and complete any room with a custom combination of Shades, Blinds, and Fabric Window Treatments. Schedule your free design consultation today.</p>
-     <div class="product one-third first" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+     <div class="product one-third first">
       <div class="image-wrapper">
-        <img itemprop="contentUrl" src="/wp-content/uploads/2017/03/cellular-shades-kelowna.jpg" alt="Kelowna Cellular Shades">
+        <img src="/wp-content/uploads/2017/03/cellular-shades-kelowna.jpg" alt="Kelowna Cellular Shades">
       </div>
-       <h3 itemprop="name">Cellular Shades</h3>
-       <p itemprop="description">Illuminate your day and insulate your home. Soft, luxurious fabrics folded into honeycomb-shaped cells. A smart way to improve the energy efficiency of your home.</p>
+       <h3>Cellular Shades</h3>
+       <p>Illuminate your day and insulate your home. Soft, luxurious fabrics folded into honeycomb-shaped cells. A smart way to improve the energy efficiency of your home.</p>
      </div>
      <div class="product one-third">
         <div class="image-wrapper">
@@ -155,8 +163,8 @@ function cb_frontpage_content() { ?>
 
 <div class="testimonials full-width-container">
   <div class="wrap">
-  <q>Inspired Window Fashions was very professional and knowledgable in helping me match my blinds to my home.</q>
-  <div class="author">Jeanette Jones</div>
+  <q>It took me going back and forth before purchasing. Not only was Sydney patient. But he stayed positive and helpful through the whole process.</q>
+  <div class="author">Carolyn Bennet</div>
   </div>          
 </div>
 

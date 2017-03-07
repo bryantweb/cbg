@@ -1,0 +1,210 @@
+/*MODAL STYLES*/
+
+div#pum_popup_title_100 {
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+// FORM CONTENTS
+
+.hide-label label.gfield_label {
+    display:none;
+}
+
+#gform_fields_1 span.gfield_required {
+    display: none;
+}
+
+.gfield {
+    margin-bottom: 20px;
+}
+
+#gform_1 { 
+    margin-top: 60px; 
+}
+
+#gform_1 span#input_1_1_3_container label,
+#gform_2 span#input_2_1_3_container label  {
+    display: none;
+}
+
+#gform_1 .gfield input,
+#gform_2 .gfield input {
+    width: 100%;
+    background: #F0F0F0;
+    padding: 18px;
+    color: #808080;
+    //border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    -webkit-font-smoothing: auto;
+    height: 50px;
+}
+
+#gform_1 .gform_button,
+#gform_2 .gform_button  {
+    background: #79c76f;
+    border-radius: 40px;
+    padding: 0 25px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    border: none;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto 30px;
+    transition: all 0.3s;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+        &:hover {
+            background: darken(#79c76f, 10%);
+        }
+}
+
+p.privacy {
+    text-align: center;
+    margin-top: 0px;
+    color: #bbb;
+    font-size: 14px
+}
+
+p.privacy a {
+    color: #bbb;
+}
+
+
+#gform_wrapper_1 .validation_error,
+#gform_wrapper_2 .validation_error  {
+    font-size: 16px;
+    color: #a0142b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#gform_wrapper_1 .gfield_error input,
+#gform_wrapper_2 .gfield_error input {
+    border-color: #a0142b;
+    background: #fbf1f1;
+}
+
+#gform_wrapper_1 .validation_message,
+#gform_wrapper_2 .validation_message {
+    display: none;
+}
+
+p.inline-form {
+    color: #eee;
+    text-align: center;
+    margin: 40px 0 40px;
+}
+
+/*SUCCESS PAGES*/
+
+.page-id-78,
+.page-id-107 {
+    background-color: rgba(35,53,9,0);
+    background-image: url(/wp-content/uploads/2017/03/graber-blinds-feature-drk.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+        .site-header,
+        .site-footer {
+            display: none;
+        }
+        .entry {
+            background: transparent;
+        }
+        .btn.rounded {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            display: inline-block;
+            clear: right;
+        }
+        p {
+            font-weight: 500;
+            font-size: 22px;
+        }
+        a.post-edit-link {
+            display: none;
+        }
+}
+
+.page-id-107 {
+    background-image: url(/wp-content/uploads/2017/03/kelowna-solar-blinds.jpg);
+}
+
+.success-icon {
+    max-width: 275px;
+    max-height: 275px;
+    margin: 2em auto;
+    transition: transform 1s;
+}
+
+.form-success h1.title-heading-center {
+    color: white;
+}
+
+.form-success p {
+    color: white;
+    text-align: center;
+}
+
+
+// INLINE FORM
+
+.form-container {
+    background: #2d373a;
+    padding: 40px 80px;
+    p {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #eee;
+    text-align: center;
+    margin: 40px 0 40px;
+    }
+}
+
+.form-icon {
+    height: 62px;
+    width: 62px;
+    margin: 0 auto;
+}
+
+.form-container .privacy {
+    line-height: 1;
+}
+.hero-testimonial {
+    background: rgba(0,0,0,0.35);
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.hero-testimonial p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.hero-testimonial .author {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 10px;
+    color: #eee;
+    font-style: italic;
+}
+
+#hero-inline-trust-signals {
+    margin: 40px 0;
+}

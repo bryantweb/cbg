@@ -61,6 +61,8 @@ function genesis_sample_enqueue_scripts_styles() {
 	wp_enqueue_style( 'cbg-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
+	wp_enqueue_script( 'gobal-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
+
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
@@ -69,7 +71,7 @@ function genesis_sample_enqueue_scripts_styles() {
 		'genesis_responsive_menu',
 		genesis_sample_responsive_menu_settings()
 	);
-		wp_enqueue_script( 'gobal-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
+
 
 }
 
@@ -185,7 +187,7 @@ add_filter( 'genesis_footer_output', 'bfg_footer_creds_text' );
 
 function bfg_footer_creds_text() {
 
-	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Chris Bryant, All rights reserved. <a href="/terms" title="Terms of Use">Disclaimer</a> <a href="/privacy" title="Privacy Policy">Privacy Policy</a> <a href="/sitemap" title="Sitemap">Sitemap</a> <a href="/contact" title="Contact Chris Bryant">Contact</a> <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
+	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Inspired Window Fashions, All rights reserved. <a href="/terms" title="Terms of Use">Terms</a> &middot; <a href="/privacy" title="Privacy Policy">Privacy Policy</a> &middot; <a href="/contact" title="Contact Inspired Window Fashions">Contact</a> &middot; <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
 
 }
 

@@ -1,0 +1,69 @@
+//================================
+// GLOBAL CONFIGURATION
+//================================
+
+// Font Stacks
+//http://fonts.googleapis.com/css?family=Montserrat:400,700'
+//$font-url-google 		: 'http://fonts.googleapis.com/css?family=Montserrat:400,700'
+$helvetica-neue			: 'Helvetica Neue', Helvetica, Arial, sans serif;
+$font-family-primary	: 'Helvetica Neue', Helvetica, Arial, sans serif;
+$font-family-secondary	: 'Helvetica Neue', Helvetica, Arial, sans serif;
+$georgia-stack			: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+// https://medium.com/@mwichary/system-shock-6b1dc6d6596f
+$sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+/* Monospace stack */
+$mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+$action         : #83c761;
+$action-hover   : darken($action, 10%);
+
+// Descriptive Base Colors
+
+$white			: #fff;
+$black			: #000;
+$gray 			: #808080;
+$dark-gray 		: #333;
+$mineshaft		: #333;
+$medium-gray	: #999;
+$light-gray		: #ddd;
+
+
+// Color Usage
+
+// $color-primary		: $midnight;
+// $color-secondary	: $graphically-blue;
+// $color-accent 		: $pink;
+// $color-shadow		: rgba($black, .2);
+// $text-link-color    : $beryl;
+// $dark-text-color    : #333;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Typography
+$base-font-family: $helvetica-neue;
+$heading-font-family: $base-font-family;
+
+// Font Colors
+$base-background-color: $white;
+$base-font-color: $dark-gray;
+
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+/*********************
+COLORS
+*********************/
+$grey: $gray;
+$apple-gradient: linear-gradient(to bottom, #fff 0, #f6f6f6 100px);
