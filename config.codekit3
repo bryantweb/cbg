@@ -9,6 +9,18 @@
 	],
 "creatorBuild": "25568",
 "files": {
+	"\/backup-frontpage-template.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backup-frontpage-template.php",
+		"oF": 0
+		},
+	"\/backup-page-request-consultation.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backup-page-request-consultation.php",
+		"oF": 0
+		},
 	"\/CHANGELOG.md": {
 		"cS": 0,
 		"eF": 1,
@@ -27,22 +39,10 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/frontpage-template.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/frontpage-template.php",
-		"oF": 0
-		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
-		"oF": 0
-		},
-	"\/images\/favicon.ico": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/images\/favicon.ico",
 		"oF": 0
 		},
 	"\/js\/global.js": {
@@ -85,6 +85,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/genesis-sample.pot",
+		"oF": 0
+		},
+	"\/leadpage.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/leadpage.php",
 		"oF": 0
 		},
 	"\/lib\/custom-admin.php": {
@@ -160,12 +166,6 @@
 		"oAP": "\/lib\/woocommerce\/woocommerce-setup.php",
 		"oF": 0
 		},
-	"\/page-request-consultation.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/page-request-consultation.php",
-		"oF": 0
-		},
 	"\/page_landing.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -210,7 +210,7 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/src\/scss\/_frontpage.scss": {
+	"\/src\/scss\/_leadpage.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -218,7 +218,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/css\/_frontpage.css",
+		"oAP": "\/src\/css\/_leadpage.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

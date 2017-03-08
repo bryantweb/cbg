@@ -1,6 +1,14 @@
-/* ## Homepage Customizations
+/* ## LeadPage Template Customizations
 --------------------------------------------- */
-.landing .site-inner {
+
+// @media only screen and (max-width: 1340px) 
+// @media only screen and (max-width: 1200px)
+// @media only screen and (max-width: 1023px)
+// @media only screen and (max-width: 860px)
+
+
+.landing .site-inner,
+.leadpage .site-inner {
 	padding-top: 0px;
 }
 
@@ -10,11 +18,10 @@
 	display: block;
 }
 
-
 // HERO
 .hero {
 	text-shadow: 0px 1px rgba(0,0,0,0.3);
-	background-color: rgba(35,53,9,0);
+	background-color: #4b6a80;
     background-image: url(/wp-content/uploads/2017/03/graber-blinds-feature-drk.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -32,19 +39,27 @@
 	}
 }
 
-.request-quote .hero {
+.hero.hero-b {
 	background-image: url(/wp-content/uploads/2017/03/kelowna-solar-blinds.jpg);
 }
+@media only screen and (max-width: 1023px) {
+	background-image: url(/wp-content/uploads/2017/03/graber-january-860.jpg);
+}
 
-// .request-quote a.btn.pill.sml.popmake-homepage-form.pum-trigger {
-// 	display: none;
-// }
+@media only screen and (max-width: 400px) {
+	.hero,
+	.hero.hero-b {
+		padding-top: 150px;
+		background-image: none;
+	}
+}
 
 
-.landing {
+.landing,
+.leadpage {
 	h2 {
-	text-align: center;
-	margin-bottom: 31px;
+		text-align: center;
+		margin-bottom: 31px;
 	}
 	h3 {
 		text-align: center;
@@ -181,12 +196,19 @@ span.circle.dashicons.dashicons-yes {
 }
 /*MONTHLY PROMO BOX*/
 .monthly-promo {
+	background-color: #5b5d5a;
 	background-image: url(/wp-content/uploads/2017/03/marchmay-freecordless-promo.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
+}
+@media only screen and (max-width: 860px) {
+	.monthly-promo
+	{
+		background-image: none;
+	}
+}
 
 .promo-box {
 	background: #fff;

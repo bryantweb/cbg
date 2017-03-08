@@ -31,16 +31,6 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 // Include Customizer CSS.
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
-// Add WooCommerce support.
-//include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php' );
-
-// Add the required WooCommerce styles and Customizer CSS.
-//include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php' );
-
-// Add the Genesis Connect WooCommerce notice.
-//include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
-
-
 // CBG Speed Up The Site
 include_once( get_stylesheet_directory() . '/lib/optimize.php' );
 
@@ -61,17 +51,16 @@ function genesis_sample_enqueue_scripts_styles() {
 	wp_enqueue_style( 'cbg-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_script( 'gobal-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
+	//wp_enqueue_script( 'gobal-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
 
-
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
-	wp_localize_script(
-		'genesis-sample-responsive-menu',
-		'genesis_responsive_menu',
-		genesis_sample_responsive_menu_settings()
-	);
-
+	// ENABLE THIS WHEN YOU ADD MENUS TO THE SITE
+	// $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	// wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	// wp_localize_script(
+	//	'genesis-sample-responsive-menu',
+	//	'genesis_responsive_menu',
+	//	genesis_sample_responsive_menu_settings()
+	// );
 
 }
 
@@ -117,9 +106,6 @@ add_theme_support( 'custom-header', array(
 // Add support for Genesis Structural Wraps
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
 
-// Add support for custom background.
-//add_theme_support( 'custom-background' );
-
 // Add support for after entry widget.
 add_theme_support( 'genesis-after-entry-widget-area' );
 
@@ -128,6 +114,12 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 
 // Add Image Sizes.
 add_image_size( 'featured-image', 720, 400, TRUE );
+//Customize Portfolio Image Size
+
+add_image_size( 'product-desktop', 373, 257, TRUE );
+add_image_size( 'product-large', 714, 492, TRUE );
+add_image_size( 'product-tablet', 560, 386, TRUE );
+add_image_size( 'product-mobile', 320, 220, TRUE );
 
 // Rename primary and secondary navigation menus.
 add_theme_support( 'genesis-menus', array( 'primary' => __( 'After Header Menu', 'cbg' ), 'secondary' => __( 'Footer Menu', 'cbg' ) ) );
@@ -187,11 +179,9 @@ add_filter( 'genesis_footer_output', 'bfg_footer_creds_text' );
 
 function bfg_footer_creds_text() {
 
-	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Inspired Window Fashions, All rights reserved. <a href="/terms" title="Terms of Use">Terms</a> &middot; <a href="/privacy" title="Privacy Policy">Privacy Policy</a> &middot; <a href="/contact" title="Contact Inspired Window Fashions">Contact</a> &middot; <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
+	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Inspired Window Fashions, All rights reserved. <a href="/terms" title="Terms of Use">Terms</a> &middot; <a href="/privacy" title="Privacy Policy">Privacy Policy</a> &middot; <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
 
 }
-
-
 
 
 /**
@@ -225,3 +215,33 @@ function be_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
 }
 
 add_action( 'genesis_theme_settings_metaboxes', 'be_remove_metaboxes' );
+
+/**
+ * This is to make using ACF with Responsive Images easier
+ * http://aaronrutley.com/responsive-images-in-wordpress-with-acf/
+ */
+
+function ar_responsive_image($image_id,$image_size,$max_width){
+
+	// check the image ID is not blank
+	if($image_id != '') {
+
+		// set the default src image size
+		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
+
+		// set the srcset with various image sizes
+		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+
+		// generate the markup for the responsive image
+		echo 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+
+	}
+}
+
+// COMMENT THIS OUT WHEN YOU ADD MENUS TO THE SITE
+//* Disable the superfish script
+add_action( 'wp_enqueue_scripts', 'sp_disable_superfish' );
+function sp_disable_superfish() {
+	wp_deregister_script( 'superfish' );
+	wp_deregister_script( 'superfish-args' );
+}
