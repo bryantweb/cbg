@@ -179,7 +179,7 @@ add_filter( 'genesis_footer_output', 'bfg_footer_creds_text' );
 
 function bfg_footer_creds_text() {
 
-	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Inspired Window Fashions, All rights reserved. <a href="/terms" title="Terms of Use">Terms</a> &middot; <a href="/privacy" title="Privacy Policy">Privacy Policy</a> &middot; <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a></p>';
+	 return '<p>' . __( 'Copyright', CHILD_THEME_TEXT_DOMAIN ) . ' [footer_copyright] Inspired Window Fashions, All rights reserved. <a href="/sitemap" title="Sitemap">Sitemap</a> &middot; <a href="/terms" title="Terms of Use">Terms</a> &middot; <a href="/privacy" title="Privacy Policy">Privacy Policy</a> <!--&middot; <a class="cbatt" href="https://chrisbryant.com" title="Kelowna Web Design and Marketing">Site &amp; Marketing by Chris Bryant</a> --></p>';
 
 }
 

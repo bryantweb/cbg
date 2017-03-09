@@ -21,6 +21,12 @@
 		"oAP": "\/backup-page-request-consultation.php",
 		"oF": 0
 		},
+	"\/backup-page_sitemap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backup-page_sitemap.php",
+		"oF": 0
+		},
 	"\/CHANGELOG.md": {
 		"cS": 0,
 		"eF": 1,
@@ -43,6 +49,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
+		"oF": 0
+		},
+	"\/images\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/images\/favicon.ico",
 		"oF": 0
 		},
 	"\/js\/global.js": {

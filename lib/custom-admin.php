@@ -50,7 +50,7 @@ function ea_disable_acf_on_frontend( $plugins ) {
             unset( $plugins[$i] );
     return $plugins;
 }
-//add_filter( 'option_active_plugins', 'ea_disable_acf_on_frontend' );
+add_filter( 'option_active_plugins', 'ea_disable_acf_on_frontend' );
 
 
 
